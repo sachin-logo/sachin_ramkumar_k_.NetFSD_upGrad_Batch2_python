@@ -1,0 +1,98 @@
+[
+  {
+    "id": "INC001",
+    "title": "Database connection timeout on prod-db01",
+    "description": "Production database server prod-db01 at 10.0.1.5 is not accepting connections. TCP port 5432 unreachable. Multiple application services reporting connection refused. Likely full outage affecting all backend services.",
+    "reported_by": "monitoring-bot",
+    "timestamp": "2024-08-12T08:14:00Z",
+    "assigned_team": "DBA Team"
+  },
+  {
+    "id": "INC002",
+    "title": "Suspicious login attempts from unknown IP",
+    "description": "Over 200 failed SSH login attempts detected from IP 185.220.101.47 in the past 30 minutes. This looks like a brute-force attack targeting the admin account on web-server-02. Source IP not in allowlist.",
+    "reported_by": "security-scanner",
+    "timestamp": "2024-08-12T10:45:00Z",
+    "assigned_team": "Security Team"
+  },
+  {
+    "id": "INC003",
+    "title": "Checkout service returning NullPointerException",
+    "description": "The checkout microservice is throwing a NullPointerException on every POST /api/checkout request. Stack trace shows the error in CartService.java:142. HTTP 500 responses being returned to all users. App is failing.",
+    "reported_by": "dev-alerts",
+    "timestamp": "2024-08-12T11:03:00Z",
+    "assigned_team": "Backend Team"
+  },
+  {
+    "id": "INC004",
+    "title": "Network switch offline in DC rack B",
+    "description": "Core network switch SW-RACK-B-01 is down and unreachable on 192.168.10.2. All servers in rack B have lost connectivity. The switch handles VLAN 20 and VLAN 30 traffic. Production services in that rack are fully offline.",
+    "reported_by": "netops-monitor",
+    "timestamp": "2024-08-12T12:20:00Z",
+    "assigned_team": "Network Team"
+  },
+  {
+    "id": "INC005",
+    "title": "Ransomware signature detected on workstation",
+    "description": "Endpoint detection tool flagged ransomware signatures on workstation WKSTN-042 assigned to finance team. Files in C:/Users/jsmith/Documents are being encrypted. The machine should be isolated immediately to prevent spread.",
+    "reported_by": "edr-agent",
+    "timestamp": "2024-08-12T13:10:00Z",
+    "assigned_team": "Security Team"
+  },
+  {
+    "id": "INC006",
+    "title": "Payment gateway timeout — Stripe API 503",
+    "description": "Payment service is receiving HTTP 503 errors from the Stripe API endpoint https://api.stripe.com/v1/charges. Requests are timing out after 30s. Error code STRIPE_TIMEOUT returned. All payment transactions failing.",
+    "reported_by": "payment-monitor",
+    "timestamp": "2024-08-12T14:00:00Z",
+    "assigned_team": "Backend Team"
+  },
+  {
+    "id": "INC007",
+    "title": "Intermittent packet loss on VLAN 30",
+    "description": "Network monitoring shows 15% intermittent packet loss on VLAN 30 between floors 3 and 4. TCP retransmissions increasing. Affecting users in the finance department. The issue appears to be on the uplink between SW-F3 at 192.168.30.1 and SW-F4.",
+    "reported_by": "netops-monitor",
+    "timestamp": "2024-08-12T15:05:00Z",
+    "assigned_team": "Network Team"
+  },
+  {
+    "id": "INC008",
+    "title": "Phishing email reported by 3 employees",
+    "description": "Three employees in the marketing department have reported receiving a suspicious phishing email impersonating the IT department. The email contains a link to a credential harvesting page. Subject line: 'Urgent: Reset your password now'. Sender domain spoofed.",
+    "reported_by": "helpdesk",
+    "timestamp": "2024-08-12T15:30:00Z",
+    "assigned_team": "Security Team"
+  },
+  {
+    "id": "INC009",
+    "title": "API response slow — P95 latency 4.2s",
+    "description": "The product catalog API /api/products is experiencing degraded performance. P95 latency has risen to 4.2 seconds, up from a baseline of 200ms. The service is intermittently slow but not fully down. Likely a database query or cache issue.",
+    "reported_by": "apm-agent",
+    "timestamp": "2024-08-12T16:00:00Z",
+    "assigned_team": "Backend Team"
+  },
+  {
+    "id": "INC010",
+    "title": "Scheduled job failed — non-production env",
+    "description": "The nightly ETL job on the staging environment failed at step 3 of 8. Error: FileNotFoundError — input CSV file missing. This is a non-production issue. The job is scheduled to run again tomorrow. No user impact. Low priority.",
+    "reported_by": "scheduler-agent",
+    "timestamp": "2024-08-12T16:45:00Z",
+    "assigned_team": "Data Team"
+  },
+  {
+    "id": "INC011",
+    "title": "Minor firewall rule misconfiguration found",
+    "description": "A security audit found a minor misconfiguration in firewall rule FW-RULE-204 allowing outbound traffic on port 8080 from the DMZ. This is a low-risk finding. No active exploitation detected. Should be corrected in the next change window.",
+    "reported_by": "security-audit",
+    "timestamp": "2024-08-12T17:15:00Z",
+    "assigned_team": "Security Team"
+  },
+  {
+    "id": "INC012",
+    "title": "DNS resolution intermittent on 10.2.0.0/16",
+    "description": "Several hosts on the 10.2.0.0/16 subnet are reporting intermittent DNS resolution failures. nslookup times out approximately 30% of the time. The primary DNS server at 10.2.0.1 appears to be responding slowly. Issue is intermittent and affecting a subset of users.",
+    "reported_by": "netops-monitor",
+    "timestamp": "2024-08-12T17:50:00Z",
+    "assigned_team": "Network Team"
+  }
+]
