@@ -1,0 +1,18 @@
+{
+  "name": "employee-management-dashboard",
+  "version": "1.0.0",
+  "description": "Browser-based Employee Management System — HTML5, CSS3, Bootstrap 5, JS ES6+, jQuery",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "start": "npx serve . -p 3000"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0"
+  },
+  "keywords": ["employee", "management", "dashboard", "html", "css", "javascript"],
+  "author": "",
+  "license": "MIT"
+}
